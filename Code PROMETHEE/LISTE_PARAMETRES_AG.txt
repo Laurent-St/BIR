@@ -1,0 +1,15 @@
+- PROBABILITE DE MUTATION (argument de la fonction mutation): 0.3
+
+- NOMBRE DE PARENTS INITIALS (fonction choix_profils_pour_algo_genetique): 500
+- n (=nombre de parents pris dans les parents initiaux): NOMBRE_DE_PARENTS_INITIAL/5
+
+- TOURNAMENT SIZE (argument de la fonction tournament_selection): n/4
+- NOMBRE DE TOURNOIS (fonction tournament_selection): ceil(length(parents)/4)
+
+- NOMBRE DE GENERATIONS(fonction test_algo_genetique): 250
+
+- EPSILON(fonction croisement, pour éviter que 2 normes très proches soient acceptées): 0.1
+
+- PROBA_MUTATION (argument de la fonction mutation appelée dans croisement, valeur fixée dans test_algo_genetique)
+	:0.3
+- 

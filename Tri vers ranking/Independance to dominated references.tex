@@ -1,0 +1,81 @@
+\documentclass{article}
+
+\usepackage[french]{babel}
+\usepackage{amsthm}
+\usepackage[utf8]{inputenc}  
+\usepackage[T1]{fontenc}
+\usepackage[document]{ragged2e}
+
+\begin{document}
+
+
+\section{Independance to dominated references}
+
+\subsection{Hypothesis}
+
+Let $F=\{f_1,...,f_k,...,f_q\}$ be a set of criteria.\\
+Let R be a set of r reference profiles, $A=\{a_1,...,a_i,a_j,...a_n\}$ a set of alternatives and $R_i=R\cup\{a_i\}$.\\
+We consider the following inequality: \[\phi_{R_i}(a_i)\geq\phi_{R_j}(a_j)\].
+Lets consider $R_{i}^{'}=R_i\cup\{r_h\}\mid f_k(r_h)<min(x)$ with $x\in R_i\cup A$
+
+\subsection{Thesis}
+
+$\phi_{R_i}^{'}(a_i)\geq\phi_{R_j}^{'}(a_j)$ $\forall$ i$\neq$j
+
+\subsection{Demonstration}
+
+$f(a_i)>f(r_h)$\\
+$\iff d(a_i,r_h)>0$\\
+$\iff P(a_i,r_h)\geq0$\\
+and $\phi_{R_i}^{'}(a_i)=\frac{1}{r+1}\sum\limits_{x\in R_{i}}^{} \sum\limits_{k=1}^q w_k (P_k(a_i,x)-P_k(x,a_i)) + \sum\limits_{k=1}^q w_k (P_k(a_i,r_h)-P_k(r_h,a_i))$\linebreak
+
+Though, $\phi_{R_i}(a_i)=\frac{1}{r}\sum\limits_{x\in R_{i}}^{} \sum\limits_{k=1}^q w_k (P_k(a_i,x)-P_k(x,a_i))$\linebreak
+
+Therefore, $\phi_{R_i}^{'}(a_i)=\frac{r}{r+1}\phi_{R_i}(a_i)+\sum\limits_{k=1}^q w_k (P_k(a_i,r_h)-P_k(r_h,a_i))$\\
+where $P_k(r_h,a_i)=0$\linebreak
+
+Considering alternative $a_j$, we come to the same conclusion. We thus have the 2 following expressions:\linebreak
+
+$\phi_{R_i}^{'}(a_i)=\frac{r}{r+1}\phi_{R_i}(a_i)+\sum\limits_{k=1}^q w_k P_k(a_i,r_h)$\\
+$\phi_{R_j}^{'}(a_j)=\frac{r}{r+1}\phi_{R_j}(a_j)+\sum\limits_{k=1}^q w_k P_k(a_j,r_h)$\\
+
+Furthermore, $\phi_{R_i}(a_i)\geq\phi_{R_j}(a_j)$ (by hypothesis). The inequality between $\phi_{R_i}^{'}(a_i)$ and $\phi_{R_j}^{'}(a_j)$ is thus determined by the inequality between $P_k(a_i,r_h)$ and $P_k(a_j,r_h)$.\linebreak
+
+2 situations have to be considered:
+
+\subsubsection{$f_k(a_i)\geq f_k(a_j)$:}
+In this case: $P_k(a_i,r_h) \geq P_k(a_j,r_h)$  $\forall k$, thus $\phi_{R_i}^{'}(a_i)\geq\phi_{R_j}^{'}(a_j)$ $\forall$ i$\neq$j
+
+\subsubsection{$\exists$ $at$ $least$ $one$ $k :$ $f_k(a_i) < f_k(a_j)$:}
+\label{2esituation}
+Here there are 3 sub-situations to consider because the inequality $P_k(a_i,r_h)>P_k(a_j,r_h)$ is not verified $\forall k$:
+
+\paragraph{}
+\textbf{a):}$\sum\limits_{k=1}^q w_k P_k(a_i,r_h)>\sum\limits_{k=1}^q w_k P_k(a_j,r_h) \iff \phi_{R_i}^{'}(a_i)>\phi_{R_j}^{'}(a_j)$
+
+\paragraph{}
+\textbf{b):}$\sum\limits_{k=1}^q w_k P_k(a_i,r_h)<\sum\limits_{k=1}^q w_k P_k(a_j,r_h) \iff \phi_{R_i}^{'}(a_i)<\phi_{R_j}^{'}(a_j)$\linebreak
+\begin{tabbing}
+\hspace{2cm}\=\hspace{2cm}\=\kill
+\> \textbf{The thesis is thus invalidated in this case}
+\end{tabbing}
+
+
+\paragraph{}
+\textbf{c):}$\sum\limits_{k=1}^q w_k P_k(a_i,r_h)=\sum\limits_{k=1}^q w_k P_k(a_j,r_h) \iff \phi_{R_i}^{'}(a_i)=\phi_{R_j}^{'}(a_j)$\\
+
+\subsection{Conclusion}
+We can see that independance to dominated reference is guaranteed for all cases excepted the \ref{2esituation} b).
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}

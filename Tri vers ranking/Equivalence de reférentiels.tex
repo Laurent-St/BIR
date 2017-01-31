@@ -1,0 +1,33 @@
+\documentclass{article}
+\usepackage[french]{babel}
+\usepackage{amsthm}
+\usepackage[utf8]{inputenc}  
+\usepackage[T1]{fontenc}
+\usepackage[document]{ragged2e}
+
+\begin{document}
+
+\section{Equivalence de référentiel}
+
+\subsection{Hypothèses}\justify
+Soient n alternatives $a_i (i=1,...,n)$, q critères $f_k (k=1,...,q)$ et $f_k(a_i)$ l'évaluation de l'alternative $a_i$ selon le critère $f_k$. On considère un ensemble de référence $R$ constitué de m profils type $r_h (h=1,...,m)$ . Le flux net d'une action $a_i$ sur base de cet ensemble est $\phi_R(a_i)=\sum\limits_{k=1}^q w_k.\phi_{k_R}(a_i)$ où $w_k$ est le poids associé au critère k et $\phi_{k_R}(a_i)$ est le flux unicritère de l'alternative $a_i$ pour le critère k.
+
+\subsection{Thèse}\justify
+$\forall R, \exists R'$ de même taille: $\phi_R(a_i)=\phi_{R'}(a_i)$ et $f_{k_{R'}}(r_h)>f_{k_{R'}}(r_{h+1})$ $\forall h \forall k$\\
+
+ABORDER LE CAS $F_K=F_{KPRIME}$
+
+\subsection{Démonstration}
+On a $\phi_R(a_i)=\sum\limits_{k=1}^q w_k.\phi_{k_R}(a_i)$. Or on somme sur les flux unicritères et le flux unicritère d'un critère ne varie pas en fonction de l'ensemble de référence, ce qui s'exprime $\phi_{k_R}(a_i)=\phi_{k_{R'}}(a_i)$. De plus, comme les poids $w_k$ sont aussi indépendants de l'ensemble de référence, le flux net d'une action $a_i$ est lui aussi invariant si on passe de $R$ à $R'$.
+Dès lors, quel que soit l'ensemble de référence R de départ, il existe un R' classé (i.e. où les profils type ne se chevauchent pas) dans lequel les flux net restent identiques.
+
+
+
+
+
+
+
+
+
+
+\end{document}

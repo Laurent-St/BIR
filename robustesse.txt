@@ -1,0 +1,6 @@
+robustesse: 
+- au rank reversal
+		
+-robuste par rapport à des modifications de paramètres: une modification légère des paramètres
+ne doit pas faire changer la relation d'ordre entre les alternatives: définir un intervalle de stabilité au moyen
+de la programmation linéaire.
